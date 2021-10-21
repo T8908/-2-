@@ -1,25 +1,31 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31702.278
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISMPrakt02", "ISMPrakt02\ISMPrakt02.csproj", "{8AFBFE72-2536-4698-9E8A-A4A1B84BA66D}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8AFBFE72-2536-4698-9E8A-A4A1B84BA66D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8AFBFE72-2536-4698-9E8A-A4A1B84BA66D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8AFBFE72-2536-4698-9E8A-A4A1B84BA66D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8AFBFE72-2536-4698-9E8A-A4A1B84BA66D}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B17992AE-AA2A-43FB-BAF1-10FAD3382065}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ISMPrakt02
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //реалізувати читання з клавіатури чотирьох чисел типу double: a, b, c, d;
+            double a, b, c, d;
+            double x, y, z, r;
+            a = Convert.ToDouble(Console.ReadLine());
+            b = Convert.ToDouble(Console.ReadLine());
+            c = Convert.ToDouble(Console.ReadLine());
+            d = Convert.ToDouble(Console.ReadLine());
+            //обчислити значення виразів і вивести на екран їх значення:
+            x = ((a + 2 * b - c + d) / c * d) + ((a + b) / (c - d)) - (a * a / b * b);
+            y = (5 * (a + b) * (c - d)) / (0.5 * c) + d * d * ((a * a - b * b) / b - a);
+            z = (Math.Pow((Math.Pow(x, 2) - 2 * x), 3) - 4 * (Math.Pow(x, 4) * (1 - b))) / 5 * a + 3 * b;
+            r = ((1 / 2 * a + 3 / 4 * b - 7 / 5) / 3 * c + 1) + 1 / a - c;
+            Console.WriteLine($"x = {x}\ny = {y}\nz = {z}\nr = {r}\n");
+
+
+
+        }
+    }
+}
